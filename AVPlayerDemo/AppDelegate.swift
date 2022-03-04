@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         BZXCDEService.activate()
         
         DispatchQueue.main.async {
-            self.startService()
+//            self.startService()
 //            self.getDNS()
         }
         return true
