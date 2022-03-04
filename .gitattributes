@@ -1,1 +1,2 @@
 libysdq-sdk/cde-sdk/cde_libs/libcde_raw.a filter=lfs diff=lfs merge=lfs -text
+AVPlayerDemo/IJKMediaFrameworkWithSSL.framework/IJKMediaFrameworkWithSSL filter=lfs diff=lfs merge=lfs -text
