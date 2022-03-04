@@ -1,0 +1,6 @@
+module Pods_AVPlayerDemo {
+  umbrella header "Pods-AVPlayerDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

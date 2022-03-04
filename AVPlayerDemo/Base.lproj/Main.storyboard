@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QDj-PN-T2r">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="JzT-zO-1AM">
+            <objects>
+                <tableViewController id="YAR-eG-0RN" customClass="ViewController" customModule="AVPlayerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="videoCell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="AFO-Zi-TuF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="videoCell" rowHeight="220" id="TFp-lW-JiR" customClass="VideoCell" customModule="AVPlayerDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="220"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TFp-lW-JiR" id="KWU-yN-jEJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L76-IT-DGZ" customClass="VideoView" customModule="AVPlayerDemo" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="11" width="374" height="198"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="weD-Xm-b5C">
+                                            <rect key="frame" x="20" y="11" width="374" height="198"/>
+                                            <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="weD-Xm-b5C" secondAttribute="height" multiplier="17:9" id="EoA-FP-4K7"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iMS-PP-lsi">
+                                            <rect key="frame" x="199.5" y="101.5" width="15" height="16.5"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line.3.crossed.swirl.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="IDt-qW-AVK">
+                                            <rect key="frame" x="197" y="100.5" width="20" height="19"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="IDt-qW-AVK" firstAttribute="centerX" secondItem="KWU-yN-jEJ" secondAttribute="centerX" id="04N-4R-LYX"/>
+                                        <constraint firstItem="weD-Xm-b5C" firstAttribute="top" secondItem="KWU-yN-jEJ" secondAttribute="topMargin" id="1Mv-Hh-grZ"/>
+                                        <constraint firstItem="L76-IT-DGZ" firstAttribute="top" secondItem="weD-Xm-b5C" secondAttribute="top" id="1Ua-en-Bg3"/>
+                                        <constraint firstItem="L76-IT-DGZ" firstAttribute="leading" secondItem="weD-Xm-b5C" secondAttribute="leading" id="Gpn-hE-Bzr"/>
+                                        <constraint firstItem="L76-IT-DGZ" firstAttribute="bottom" secondItem="weD-Xm-b5C" secondAttribute="bottom" id="JZI-km-dNH"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="weD-Xm-b5C" secondAttribute="bottom" id="SoY-gR-gkG"/>
+                                        <constraint firstItem="weD-Xm-b5C" firstAttribute="leading" secondItem="KWU-yN-jEJ" secondAttribute="leadingMargin" id="akJ-Rf-4cZ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="weD-Xm-b5C" secondAttribute="trailing" id="e4R-qm-sFP"/>
+                                        <constraint firstItem="IDt-qW-AVK" firstAttribute="centerY" secondItem="KWU-yN-jEJ" secondAttribute="centerY" id="hIb-Mf-qQG"/>
+                                        <constraint firstItem="iMS-PP-lsi" firstAttribute="centerY" secondItem="KWU-yN-jEJ" secondAttribute="centerY" id="iAb-dd-k7V"/>
+                                        <constraint firstItem="iMS-PP-lsi" firstAttribute="centerX" secondItem="KWU-yN-jEJ" secondAttribute="centerX" id="pH9-iF-Xmv"/>
+                                        <constraint firstItem="L76-IT-DGZ" firstAttribute="trailing" secondItem="weD-Xm-b5C" secondAttribute="trailing" id="zJE-y1-vRh"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="coverImageView" destination="weD-Xm-b5C" id="WZZ-bx-h2x"/>
+                                    <outlet property="iconLoadingImageView" destination="IDt-qW-AVK" id="rYa-kJ-vPc"/>
+                                    <outlet property="iconPlayImageView" destination="iMS-PP-lsi" id="cAW-9g-dqT"/>
+                                    <outlet property="videoView" destination="L76-IT-DGZ" id="9CF-z2-Z6N"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="YAR-eG-0RN" id="1XC-E4-DkB"/>
+                            <outlet property="delegate" destination="YAR-eG-0RN" id="RRh-Z9-4wr"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="gxL-QB-esj">
+                        <barButtonItem key="leftBarButtonItem" title="startP2P" id="scz-hR-Nx0">
+                            <connections>
+                                <action selector="p2pAction:" destination="YAR-eG-0RN" id="E1s-hu-jqn"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="sky-j3-hME">
+                            <connections>
+                                <action selector="addVideo:" destination="YAR-eG-0RN" id="ODV-4D-t8D"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="p2pButton" destination="scz-hR-Nx0" id="RhR-So-TaE"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SWm-h7-P6b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908.69565217391312" y="138.61607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Cpc-9T-reK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QDj-PN-T2r" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3hO-RN-gfd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YAR-eG-0RN" kind="relationship" relationship="rootViewController" id="R2w-0V-hyQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="foP-sS-9pL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1.4492753623188408" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="line.3.crossed.swirl.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

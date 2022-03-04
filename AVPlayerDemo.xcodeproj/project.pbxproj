@@ -1,0 +1,823 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F1253E727CD12CB00E37810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1253E627CD12CB00E37810 /* AppDelegate.swift */; };
+		4F1253EB27CD12CB00E37810 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1253EA27CD12CB00E37810 /* ViewController.swift */; };
+		4F1253EE27CD12CB00E37810 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F1253EC27CD12CB00E37810 /* Main.storyboard */; };
+		4F1253F027CD12D200E37810 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F1253EF27CD12D200E37810 /* Assets.xcassets */; };
+		4F1253F327CD12D200E37810 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F1253F127CD12D200E37810 /* LaunchScreen.storyboard */; };
+		4F1253FB27CD13FE00E37810 /* VideoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1253FA27CD13FE00E37810 /* VideoItem.swift */; };
+		4F1253FD27CD14F400E37810 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1253FC27CD14F400E37810 /* VideoCell.swift */; };
+		5A319C0727CDB8B2004BD4B9 /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A319C0627CDB8B2004BD4B9 /* VideoPlayer.swift */; };
+		5A319C0927CDBF36004BD4B9 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A319C0827CDBF36004BD4B9 /* VideoView.swift */; };
+		5A319CB527CDF142004BD4B9 /* CdeDownloads.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A319C7627CDF142004BD4B9 /* CdeDownloads.m */; };
+		5A319CB627CDF142004BD4B9 /* UIDevice-Hardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A319C7A27CDF142004BD4B9 /* UIDevice-Hardware.m */; };
+		5A319CB727CDF142004BD4B9 /* CdeUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A319C7B27CDF142004BD4B9 /* CdeUrl.m */; };
+		5A319CB827CDF142004BD4B9 /* CdeDownloadItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A319C7E27CDF142004BD4B9 /* CdeDownloadItem.m */; };
+		5A319CB927CDF142004BD4B9 /* CdeBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A319C8127CDF142004BD4B9 /* CdeBase64.m */; };
+		5A319CBA27CDF142004BD4B9 /* CdeReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A319C8227CDF142004BD4B9 /* CdeReachability.m */; };
+		5A319CBB27CDF142004BD4B9 /* CdeService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A319C8327CDF142004BD4B9 /* CdeService.m */; };
+		5A319CBC27CDF142004BD4B9 /* CdeNetBroadcastReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A319C8427CDF142004BD4B9 /* CdeNetBroadcastReceiver.m */; };
+		5A319CBD27CDF142004BD4B9 /* CDEProxy.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5A319C8627CDF142004BD4B9 /* CDEProxy.mm */; };
+		5A319CBE27CDF142004BD4B9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5A319C8927CDF142004BD4B9 /* InfoPlist.strings */; };
+		5A319CBF27CDF142004BD4B9 /* cde-sdkTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A319C8B27CDF142004BD4B9 /* cde-sdkTests-Info.plist */; };
+		5A319CC027CDF142004BD4B9 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A319C9027CDF142004BD4B9 /* libcrypto.a */; };
+		5A319CC127CDF142004BD4B9 /* libboost_thread.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A319C9127CDF142004BD4B9 /* libboost_thread.a */; };
+		5A319CC227CDF142004BD4B9 /* libboost_program_options.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A319C9227CDF142004BD4B9 /* libboost_program_options.a */; };
+		5A319CC327CDF142004BD4B9 /* libz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A319C9327CDF142004BD4B9 /* libz.a */; };
+		5A319CC427CDF142004BD4B9 /* libtinyxml.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A319C9427CDF142004BD4B9 /* libtinyxml.a */; };
+		5A319CC527CDF142004BD4B9 /* libboost_atomic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A319C9527CDF142004BD4B9 /* libboost_atomic.a */; };
+		5A319CC627CDF142004BD4B9 /* libboost_date_time.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A319C9627CDF142004BD4B9 /* libboost_date_time.a */; };
+		5A319CC727CDF142004BD4B9 /* libglog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A319C9727CDF142004BD4B9 /* libglog.a */; };
+		5A319CC827CDF142004BD4B9 /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A319C9827CDF142004BD4B9 /* libboost_system.a */; };
+		5A319CC927CDF142004BD4B9 /* libprotobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A319C9927CDF142004BD4B9 /* libprotobuf.a */; };
+		5A319CCA27CDF142004BD4B9 /* libprotoc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A319C9A27CDF142004BD4B9 /* libprotoc.a */; };
+		5A319CCB27CDF142004BD4B9 /* libprotobuf-lite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A319C9B27CDF142004BD4B9 /* libprotobuf-lite.a */; };
+		5A319CCC27CDF142004BD4B9 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A319C9C27CDF142004BD4B9 /* libssl.a */; };
+		5A319CCD27CDF142004BD4B9 /* librtmfp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A319C9E27CDF142004BD4B9 /* librtmfp.a */; };
+		5A319CCE27CDF142004BD4B9 /* libboost_filesystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A319C9F27CDF142004BD4B9 /* libboost_filesystem.a */; };
+		5A319CCF27CDF142004BD4B9 /* libjson.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A319CA027CDF142004BD4B9 /* libjson.a */; };
+		5A319CD027CDF142004BD4B9 /* libboost_chrono.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A319CA127CDF142004BD4B9 /* libboost_chrono.a */; };
+		5A319CD127CDF142004BD4B9 /* libcde_raw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A319CA727CDF142004BD4B9 /* libcde_raw.a */; };
+		5A319CD727CDF364004BD4B9 /* NTYTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A319CD527CDF364004BD4B9 /* NTYTimer.m */; };
+		5A319CDE27CDF3AC004BD4B9 /* NTYKeyValueObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A319CDC27CDF3AC004BD4B9 /* NTYKeyValueObserver.m */; };
+		5A319CE727CDF4C1004BD4B9 /* Path.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A319CE627CDF4C1004BD4B9 /* Path.m */; };
+		5A319CEE27CDF561004BD4B9 /* NSString+NTYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A319CED27CDF561004BD4B9 /* NSString+NTYExtension.m */; };
+		5A319CF127CDF59F004BD4B9 /* NSObject+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A319CEF27CDF59F004BD4B9 /* NSObject+Safe.m */; };
+		5A319CF427CDF5B4004BD4B9 /* NSObject+Cast.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A319CF227CDF5B4004BD4B9 /* NSObject+Cast.m */; };
+		5A319CFA27CDF798004BD4B9 /* DQLVideoStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A319CF927CDF798004BD4B9 /* DQLVideoStreamParser.m */; };
+		5A319D4C27CF1336004BD4B9 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A319D4B27CF131B004BD4B9 /* libresolv.tbd */; };
+		5AE0532027D0C01D00756E58 /* IJKMediaFrameworkWithSSL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE0531E27D0C01C00756E58 /* IJKMediaFrameworkWithSSL.framework */; };
+		5AE0532227D0C03D00756E58 /* IJKInterface.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5AE0532127D0C03D00756E58 /* IJKInterface.mm */; };
+		981E50173D79D5E54610AE62 /* libPods-AVPlayerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26EAFCC97DD695D13022DA1B /* libPods-AVPlayerDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5A319CB127CDF142004BD4B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A319C8C27CDF142004BD4B9 /* cde-sdk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1172BA061903891B00E97BCA;
+			remoteInfo = "cde-sdk";
+		};
+		5A319CB327CDF142004BD4B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A319C8C27CDF142004BD4B9 /* cde-sdk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1172BA161903891B00E97BCA;
+			remoteInfo = "cde-sdkTests";
+		};
+		5A319CE227CDF49C004BD4B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A319C8C27CDF142004BD4B9 /* cde-sdk.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1172BA051903891B00E97BCA;
+			remoteInfo = "cde-sdk";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		26EAFCC97DD695D13022DA1B /* libPods-AVPlayerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AVPlayerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F1253E327CD12CB00E37810 /* AVPlayerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVPlayerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F1253E627CD12CB00E37810 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4F1253EA27CD12CB00E37810 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4F1253ED27CD12CB00E37810 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4F1253EF27CD12D200E37810 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4F1253F227CD12D200E37810 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4F1253F427CD12D200E37810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F1253FA27CD13FE00E37810 /* VideoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoItem.swift; sourceTree = "<group>"; };
+		4F1253FC27CD14F400E37810 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		5A319C0627CDB8B2004BD4B9 /* VideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayer.swift; sourceTree = "<group>"; };
+		5A319C0827CDBF36004BD4B9 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		5A319C7627CDF142004BD4B9 /* CdeDownloads.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CdeDownloads.m; sourceTree = "<group>"; };
+		5A319C7727CDF142004BD4B9 /* CDEProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDEProxy.h; sourceTree = "<group>"; };
+		5A319C7827CDF142004BD4B9 /* CdeBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CdeBase64.h; sourceTree = "<group>"; };
+		5A319C7927CDF142004BD4B9 /* CdeReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CdeReachability.h; sourceTree = "<group>"; };
+		5A319C7A27CDF142004BD4B9 /* UIDevice-Hardware.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice-Hardware.m"; sourceTree = "<group>"; };
+		5A319C7B27CDF142004BD4B9 /* CdeUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CdeUrl.m; sourceTree = "<group>"; };
+		5A319C7C27CDF142004BD4B9 /* CdeNetBroadcastReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CdeNetBroadcastReceiver.h; sourceTree = "<group>"; };
+		5A319C7D27CDF142004BD4B9 /* CdeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CdeService.h; sourceTree = "<group>"; };
+		5A319C7E27CDF142004BD4B9 /* CdeDownloadItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CdeDownloadItem.m; sourceTree = "<group>"; };
+		5A319C7F27CDF142004BD4B9 /* CdeDownloads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CdeDownloads.h; sourceTree = "<group>"; };
+		5A319C8027CDF142004BD4B9 /* UIDevice-Hardware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice-Hardware.h"; sourceTree = "<group>"; };
+		5A319C8127CDF142004BD4B9 /* CdeBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CdeBase64.m; sourceTree = "<group>"; };
+		5A319C8227CDF142004BD4B9 /* CdeReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CdeReachability.m; sourceTree = "<group>"; };
+		5A319C8327CDF142004BD4B9 /* CdeService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CdeService.m; sourceTree = "<group>"; };
+		5A319C8427CDF142004BD4B9 /* CdeNetBroadcastReceiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CdeNetBroadcastReceiver.m; sourceTree = "<group>"; };
+		5A319C8527CDF142004BD4B9 /* CdeUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CdeUrl.h; sourceTree = "<group>"; };
+		5A319C8627CDF142004BD4B9 /* CDEProxy.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CDEProxy.mm; sourceTree = "<group>"; };
+		5A319C8727CDF142004BD4B9 /* CdeDownloadItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CdeDownloadItem.h; sourceTree = "<group>"; };
+		5A319C8A27CDF142004BD4B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5A319C8B27CDF142004BD4B9 /* cde-sdkTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "cde-sdkTests-Info.plist"; sourceTree = "<group>"; };
+		5A319C8C27CDF142004BD4B9 /* cde-sdk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "cde-sdk.xcodeproj"; sourceTree = "<group>"; };
+		5A319C9027CDF142004BD4B9 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
+		5A319C9127CDF142004BD4B9 /* libboost_thread.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libboost_thread.a; sourceTree = "<group>"; };
+		5A319C9227CDF142004BD4B9 /* libboost_program_options.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libboost_program_options.a; sourceTree = "<group>"; };
+		5A319C9327CDF142004BD4B9 /* libz.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libz.a; sourceTree = "<group>"; };
+		5A319C9427CDF142004BD4B9 /* libtinyxml.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtinyxml.a; sourceTree = "<group>"; };
+		5A319C9527CDF142004BD4B9 /* libboost_atomic.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libboost_atomic.a; sourceTree = "<group>"; };
+		5A319C9627CDF142004BD4B9 /* libboost_date_time.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libboost_date_time.a; sourceTree = "<group>"; };
+		5A319C9727CDF142004BD4B9 /* libglog.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libglog.a; sourceTree = "<group>"; };
+		5A319C9827CDF142004BD4B9 /* libboost_system.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libboost_system.a; sourceTree = "<group>"; };
+		5A319C9927CDF142004BD4B9 /* libprotobuf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libprotobuf.a; sourceTree = "<group>"; };
+		5A319C9A27CDF142004BD4B9 /* libprotoc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libprotoc.a; sourceTree = "<group>"; };
+		5A319C9B27CDF142004BD4B9 /* libprotobuf-lite.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libprotobuf-lite.a"; sourceTree = "<group>"; };
+		5A319C9C27CDF142004BD4B9 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
+		5A319C9E27CDF142004BD4B9 /* librtmfp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = librtmfp.a; sourceTree = "<group>"; };
+		5A319C9F27CDF142004BD4B9 /* libboost_filesystem.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libboost_filesystem.a; sourceTree = "<group>"; };
+		5A319CA027CDF142004BD4B9 /* libjson.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libjson.a; sourceTree = "<group>"; };
+		5A319CA127CDF142004BD4B9 /* libboost_chrono.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libboost_chrono.a; sourceTree = "<group>"; };
+		5A319CA427CDF142004BD4B9 /* service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = service.h; sourceTree = "<group>"; };
+		5A319CA527CDF142004BD4B9 /* cde_tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cde_tag.h; sourceTree = "<group>"; };
+		5A319CA627CDF142004BD4B9 /* cde_proxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cde_proxy.h; sourceTree = "<group>"; };
+		5A319CA727CDF142004BD4B9 /* libcde_raw.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcde_raw.a; sourceTree = "<group>"; };
+		5A319CA927CDF142004BD4B9 /* CDEProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDEProxy.h; sourceTree = "<group>"; };
+		5A319CAA27CDF142004BD4B9 /* CdeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CdeService.h; sourceTree = "<group>"; };
+		5A319CAB27CDF142004BD4B9 /* cde_tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cde_tag.h; sourceTree = "<group>"; };
+		5A319CAC27CDF142004BD4B9 /* CdeDownloads.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CdeDownloads.h; sourceTree = "<group>"; };
+		5A319CAD27CDF142004BD4B9 /* CdeUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CdeUrl.h; sourceTree = "<group>"; };
+		5A319CAE27CDF142004BD4B9 /* CdeDownloadItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CdeDownloadItem.h; sourceTree = "<group>"; };
+		5A319CD527CDF364004BD4B9 /* NTYTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTYTimer.m; sourceTree = "<group>"; };
+		5A319CD627CDF364004BD4B9 /* NTYTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTYTimer.h; sourceTree = "<group>"; };
+		5A319CDC27CDF3AC004BD4B9 /* NTYKeyValueObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTYKeyValueObserver.m; sourceTree = "<group>"; };
+		5A319CDD27CDF3AC004BD4B9 /* NTYKeyValueObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTYKeyValueObserver.h; sourceTree = "<group>"; };
+		5A319CE527CDF4C1004BD4B9 /* Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Path.h; sourceTree = "<group>"; };
+		5A319CE627CDF4C1004BD4B9 /* Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Path.m; sourceTree = "<group>"; };
+		5A319CEC27CDF561004BD4B9 /* NSString+NTYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NTYExtension.h"; sourceTree = "<group>"; };
+		5A319CED27CDF561004BD4B9 /* NSString+NTYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NTYExtension.m"; sourceTree = "<group>"; };
+		5A319CEF27CDF59F004BD4B9 /* NSObject+Safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Safe.m"; sourceTree = "<group>"; };
+		5A319CF027CDF59F004BD4B9 /* NSObject+Safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Safe.h"; sourceTree = "<group>"; };
+		5A319CF227CDF5B4004BD4B9 /* NSObject+Cast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Cast.m"; sourceTree = "<group>"; };
+		5A319CF327CDF5B4004BD4B9 /* NSObject+Cast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Cast.h"; sourceTree = "<group>"; };
+		5A319CF827CDF798004BD4B9 /* DQLVideoStreamParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQLVideoStreamParser.h; sourceTree = "<group>"; };
+		5A319CF927CDF798004BD4B9 /* DQLVideoStreamParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQLVideoStreamParser.m; sourceTree = "<group>"; };
+		5A319CFE27CDFA40004BD4B9 /* AVPlayerDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AVPlayerDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		5A319D4B27CF131B004BD4B9 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		5AE0531E27D0C01C00756E58 /* IJKMediaFrameworkWithSSL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFrameworkWithSSL.framework; sourceTree = "<group>"; };
+		5AE0532127D0C03D00756E58 /* IJKInterface.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IJKInterface.mm; sourceTree = "<group>"; };
+		6CD2644D4F2D5F1DBE46525C /* Pods-AVPlayerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVPlayerDemo.release.xcconfig"; path = "Target Support Files/Pods-AVPlayerDemo/Pods-AVPlayerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		731BF74C1BC68705E1476E48 /* Pods-AVPlayerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVPlayerDemo.debug.xcconfig"; path = "Target Support Files/Pods-AVPlayerDemo/Pods-AVPlayerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F1253E027CD12CB00E37810 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A319CC327CDF142004BD4B9 /* libz.a in Frameworks */,
+				5A319CC527CDF142004BD4B9 /* libboost_atomic.a in Frameworks */,
+				5A319CCC27CDF142004BD4B9 /* libssl.a in Frameworks */,
+				5A319CCF27CDF142004BD4B9 /* libjson.a in Frameworks */,
+				5A319CC727CDF142004BD4B9 /* libglog.a in Frameworks */,
+				5A319CC027CDF142004BD4B9 /* libcrypto.a in Frameworks */,
+				5A319CCA27CDF142004BD4B9 /* libprotoc.a in Frameworks */,
+				5A319D4C27CF1336004BD4B9 /* libresolv.tbd in Frameworks */,
+				5A319CD127CDF142004BD4B9 /* libcde_raw.a in Frameworks */,
+				5AE0532027D0C01D00756E58 /* IJKMediaFrameworkWithSSL.framework in Frameworks */,
+				5A319CCE27CDF142004BD4B9 /* libboost_filesystem.a in Frameworks */,
+				5A319CCD27CDF142004BD4B9 /* librtmfp.a in Frameworks */,
+				5A319CC227CDF142004BD4B9 /* libboost_program_options.a in Frameworks */,
+				5A319CC627CDF142004BD4B9 /* libboost_date_time.a in Frameworks */,
+				5A319CC827CDF142004BD4B9 /* libboost_system.a in Frameworks */,
+				5A319CC427CDF142004BD4B9 /* libtinyxml.a in Frameworks */,
+				5A319CC927CDF142004BD4B9 /* libprotobuf.a in Frameworks */,
+				5A319CD027CDF142004BD4B9 /* libboost_chrono.a in Frameworks */,
+				981E50173D79D5E54610AE62 /* libPods-AVPlayerDemo.a in Frameworks */,
+				5A319CC127CDF142004BD4B9 /* libboost_thread.a in Frameworks */,
+				5A319CCB27CDF142004BD4B9 /* libprotobuf-lite.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		30CD85B392C5702F1B01CFD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A319D4B27CF131B004BD4B9 /* libresolv.tbd */,
+				26EAFCC97DD695D13022DA1B /* libPods-AVPlayerDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4F1253DA27CD12CB00E37810 = {
+			isa = PBXGroup;
+			children = (
+				5A319C7227CDF142004BD4B9 /* libysdq-sdk */,
+				4F1253E527CD12CB00E37810 /* AVPlayerDemo */,
+				4F1253E427CD12CB00E37810 /* Products */,
+				E0AE64C56BD153AC8215B24B /* Pods */,
+				30CD85B392C5702F1B01CFD0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4F1253E427CD12CB00E37810 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F1253E327CD12CB00E37810 /* AVPlayerDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4F1253E527CD12CB00E37810 /* AVPlayerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				5AE0532127D0C03D00756E58 /* IJKInterface.mm */,
+				5AE0531E27D0C01C00756E58 /* IJKMediaFrameworkWithSSL.framework */,
+				5A319CF827CDF798004BD4B9 /* DQLVideoStreamParser.h */,
+				5A319CF927CDF798004BD4B9 /* DQLVideoStreamParser.m */,
+				5A319CEB27CDF551004BD4B9 /* Extension */,
+				5A319CE427CDF4C1004BD4B9 /* Path */,
+				5A319CDB27CDF3AC004BD4B9 /* NTYKeyValueObserver */,
+				5A319CD627CDF364004BD4B9 /* NTYTimer.h */,
+				5A319CD527CDF364004BD4B9 /* NTYTimer.m */,
+				4F1253E627CD12CB00E37810 /* AppDelegate.swift */,
+				4F1253EA27CD12CB00E37810 /* ViewController.swift */,
+				4F1253FA27CD13FE00E37810 /* VideoItem.swift */,
+				5A319C0627CDB8B2004BD4B9 /* VideoPlayer.swift */,
+				5A319C0827CDBF36004BD4B9 /* VideoView.swift */,
+				4F1253EC27CD12CB00E37810 /* Main.storyboard */,
+				4F1253FC27CD14F400E37810 /* VideoCell.swift */,
+				4F1253EF27CD12D200E37810 /* Assets.xcassets */,
+				4F1253F127CD12D200E37810 /* LaunchScreen.storyboard */,
+				4F1253F427CD12D200E37810 /* Info.plist */,
+				5A319CFE27CDFA40004BD4B9 /* AVPlayerDemo-Bridging-Header.h */,
+			);
+			path = AVPlayerDemo;
+			sourceTree = "<group>";
+		};
+		5A319C7227CDF142004BD4B9 /* libysdq-sdk */ = {
+			isa = PBXGroup;
+			children = (
+				5A319C7327CDF142004BD4B9 /* cde-sdk */,
+				5A319CA827CDF142004BD4B9 /* include */,
+			);
+			path = "libysdq-sdk";
+			sourceTree = "<group>";
+		};
+		5A319C7327CDF142004BD4B9 /* cde-sdk */ = {
+			isa = PBXGroup;
+			children = (
+				5A319C7427CDF142004BD4B9 /* cde */,
+				5A319C8F27CDF142004BD4B9 /* lib */,
+				5A319CA227CDF142004BD4B9 /* cde_libs */,
+			);
+			path = "cde-sdk";
+			sourceTree = "<group>";
+		};
+		5A319C7427CDF142004BD4B9 /* cde */ = {
+			isa = PBXGroup;
+			children = (
+				5A319C7527CDF142004BD4B9 /* cde-sdk */,
+				5A319C8827CDF142004BD4B9 /* cde-sdkTests */,
+				5A319C8C27CDF142004BD4B9 /* cde-sdk.xcodeproj */,
+			);
+			path = cde;
+			sourceTree = "<group>";
+		};
+		5A319C7527CDF142004BD4B9 /* cde-sdk */ = {
+			isa = PBXGroup;
+			children = (
+				5A319C7627CDF142004BD4B9 /* CdeDownloads.m */,
+				5A319C7727CDF142004BD4B9 /* CDEProxy.h */,
+				5A319C7827CDF142004BD4B9 /* CdeBase64.h */,
+				5A319C7927CDF142004BD4B9 /* CdeReachability.h */,
+				5A319C7A27CDF142004BD4B9 /* UIDevice-Hardware.m */,
+				5A319C7B27CDF142004BD4B9 /* CdeUrl.m */,
+				5A319C7C27CDF142004BD4B9 /* CdeNetBroadcastReceiver.h */,
+				5A319C7D27CDF142004BD4B9 /* CdeService.h */,
+				5A319C7E27CDF142004BD4B9 /* CdeDownloadItem.m */,
+				5A319C7F27CDF142004BD4B9 /* CdeDownloads.h */,
+				5A319C8027CDF142004BD4B9 /* UIDevice-Hardware.h */,
+				5A319C8127CDF142004BD4B9 /* CdeBase64.m */,
+				5A319C8227CDF142004BD4B9 /* CdeReachability.m */,
+				5A319C8327CDF142004BD4B9 /* CdeService.m */,
+				5A319C8427CDF142004BD4B9 /* CdeNetBroadcastReceiver.m */,
+				5A319C8527CDF142004BD4B9 /* CdeUrl.h */,
+				5A319C8627CDF142004BD4B9 /* CDEProxy.mm */,
+				5A319C8727CDF142004BD4B9 /* CdeDownloadItem.h */,
+			);
+			path = "cde-sdk";
+			sourceTree = "<group>";
+		};
+		5A319C8827CDF142004BD4B9 /* cde-sdkTests */ = {
+			isa = PBXGroup;
+			children = (
+				5A319C8927CDF142004BD4B9 /* InfoPlist.strings */,
+				5A319C8B27CDF142004BD4B9 /* cde-sdkTests-Info.plist */,
+			);
+			path = "cde-sdkTests";
+			sourceTree = "<group>";
+		};
+		5A319C8D27CDF142004BD4B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A319CB227CDF142004BD4B9 /* libcde-sdk.a */,
+				5A319CB427CDF142004BD4B9 /* cde-sdkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5A319C8F27CDF142004BD4B9 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				5A319C9027CDF142004BD4B9 /* libcrypto.a */,
+				5A319C9127CDF142004BD4B9 /* libboost_thread.a */,
+				5A319C9227CDF142004BD4B9 /* libboost_program_options.a */,
+				5A319C9327CDF142004BD4B9 /* libz.a */,
+				5A319C9427CDF142004BD4B9 /* libtinyxml.a */,
+				5A319C9527CDF142004BD4B9 /* libboost_atomic.a */,
+				5A319C9627CDF142004BD4B9 /* libboost_date_time.a */,
+				5A319C9727CDF142004BD4B9 /* libglog.a */,
+				5A319C9827CDF142004BD4B9 /* libboost_system.a */,
+				5A319C9927CDF142004BD4B9 /* libprotobuf.a */,
+				5A319C9A27CDF142004BD4B9 /* libprotoc.a */,
+				5A319C9B27CDF142004BD4B9 /* libprotobuf-lite.a */,
+				5A319C9C27CDF142004BD4B9 /* libssl.a */,
+				5A319C9D27CDF142004BD4B9 /* rtmfp */,
+				5A319C9F27CDF142004BD4B9 /* libboost_filesystem.a */,
+				5A319CA027CDF142004BD4B9 /* libjson.a */,
+				5A319CA127CDF142004BD4B9 /* libboost_chrono.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		5A319C9D27CDF142004BD4B9 /* rtmfp */ = {
+			isa = PBXGroup;
+			children = (
+				5A319C9E27CDF142004BD4B9 /* librtmfp.a */,
+			);
+			path = rtmfp;
+			sourceTree = "<group>";
+		};
+		5A319CA227CDF142004BD4B9 /* cde_libs */ = {
+			isa = PBXGroup;
+			children = (
+				5A319CA327CDF142004BD4B9 /* interface */,
+				5A319CA727CDF142004BD4B9 /* libcde_raw.a */,
+			);
+			path = cde_libs;
+			sourceTree = "<group>";
+		};
+		5A319CA327CDF142004BD4B9 /* interface */ = {
+			isa = PBXGroup;
+			children = (
+				5A319CA427CDF142004BD4B9 /* service.h */,
+				5A319CA527CDF142004BD4B9 /* cde_tag.h */,
+				5A319CA627CDF142004BD4B9 /* cde_proxy.h */,
+			);
+			path = interface;
+			sourceTree = "<group>";
+		};
+		5A319CA827CDF142004BD4B9 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				5A319CA927CDF142004BD4B9 /* CDEProxy.h */,
+				5A319CAA27CDF142004BD4B9 /* CdeService.h */,
+				5A319CAB27CDF142004BD4B9 /* cde_tag.h */,
+				5A319CAC27CDF142004BD4B9 /* CdeDownloads.h */,
+				5A319CAD27CDF142004BD4B9 /* CdeUrl.h */,
+				5A319CAE27CDF142004BD4B9 /* CdeDownloadItem.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		5A319CDB27CDF3AC004BD4B9 /* NTYKeyValueObserver */ = {
+			isa = PBXGroup;
+			children = (
+				5A319CDC27CDF3AC004BD4B9 /* NTYKeyValueObserver.m */,
+				5A319CDD27CDF3AC004BD4B9 /* NTYKeyValueObserver.h */,
+			);
+			path = NTYKeyValueObserver;
+			sourceTree = "<group>";
+		};
+		5A319CE427CDF4C1004BD4B9 /* Path */ = {
+			isa = PBXGroup;
+			children = (
+				5A319CE527CDF4C1004BD4B9 /* Path.h */,
+				5A319CE627CDF4C1004BD4B9 /* Path.m */,
+			);
+			path = Path;
+			sourceTree = "<group>";
+		};
+		5A319CEB27CDF551004BD4B9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5A319CF327CDF5B4004BD4B9 /* NSObject+Cast.h */,
+				5A319CF227CDF5B4004BD4B9 /* NSObject+Cast.m */,
+				5A319CF027CDF59F004BD4B9 /* NSObject+Safe.h */,
+				5A319CEF27CDF59F004BD4B9 /* NSObject+Safe.m */,
+				5A319CEC27CDF561004BD4B9 /* NSString+NTYExtension.h */,
+				5A319CED27CDF561004BD4B9 /* NSString+NTYExtension.m */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E0AE64C56BD153AC8215B24B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				731BF74C1BC68705E1476E48 /* Pods-AVPlayerDemo.debug.xcconfig */,
+				6CD2644D4F2D5F1DBE46525C /* Pods-AVPlayerDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4F1253E227CD12CB00E37810 /* AVPlayerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F1253F727CD12D200E37810 /* Build configuration list for PBXNativeTarget "AVPlayerDemo" */;
+			buildPhases = (
+				72B1624D9D0DEFD849F210B5 /* [CP] Check Pods Manifest.lock */,
+				4F1253DF27CD12CB00E37810 /* Sources */,
+				4F1253E027CD12CB00E37810 /* Frameworks */,
+				4F1253E127CD12CB00E37810 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A319CE327CDF49C004BD4B9 /* PBXTargetDependency */,
+			);
+			name = AVPlayerDemo;
+			productName = AVPlayerDemo;
+			productReference = 4F1253E327CD12CB00E37810 /* AVPlayerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4F1253DB27CD12CB00E37810 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					4F1253E227CD12CB00E37810 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = 4F1253DE27CD12CB00E37810 /* Build configuration list for PBXProject "AVPlayerDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4F1253DA27CD12CB00E37810;
+			productRefGroup = 4F1253E427CD12CB00E37810 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 5A319C8D27CDF142004BD4B9 /* Products */;
+					ProjectRef = 5A319C8C27CDF142004BD4B9 /* cde-sdk.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				4F1253E227CD12CB00E37810 /* AVPlayerDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		5A319CB227CDF142004BD4B9 /* libcde-sdk.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libcde-sdk.a";
+			remoteRef = 5A319CB127CDF142004BD4B9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5A319CB427CDF142004BD4B9 /* cde-sdkTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "cde-sdkTests.xctest";
+			remoteRef = 5A319CB327CDF142004BD4B9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4F1253E127CD12CB00E37810 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F1253F327CD12D200E37810 /* LaunchScreen.storyboard in Resources */,
+				5A319CBF27CDF142004BD4B9 /* cde-sdkTests-Info.plist in Resources */,
+				5A319CBE27CDF142004BD4B9 /* InfoPlist.strings in Resources */,
+				4F1253F027CD12D200E37810 /* Assets.xcassets in Resources */,
+				4F1253EE27CD12CB00E37810 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72B1624D9D0DEFD849F210B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AVPlayerDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F1253DF27CD12CB00E37810 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A319CF127CDF59F004BD4B9 /* NSObject+Safe.m in Sources */,
+				5A319C0927CDBF36004BD4B9 /* VideoView.swift in Sources */,
+				4F1253FD27CD14F400E37810 /* VideoCell.swift in Sources */,
+				5A319CBB27CDF142004BD4B9 /* CdeService.m in Sources */,
+				5A319CB727CDF142004BD4B9 /* CdeUrl.m in Sources */,
+				5A319C0727CDB8B2004BD4B9 /* VideoPlayer.swift in Sources */,
+				5A319CDE27CDF3AC004BD4B9 /* NTYKeyValueObserver.m in Sources */,
+				5AE0532227D0C03D00756E58 /* IJKInterface.mm in Sources */,
+				5A319CF427CDF5B4004BD4B9 /* NSObject+Cast.m in Sources */,
+				4F1253FB27CD13FE00E37810 /* VideoItem.swift in Sources */,
+				5A319CB927CDF142004BD4B9 /* CdeBase64.m in Sources */,
+				5A319CFA27CDF798004BD4B9 /* DQLVideoStreamParser.m in Sources */,
+				5A319CEE27CDF561004BD4B9 /* NSString+NTYExtension.m in Sources */,
+				4F1253EB27CD12CB00E37810 /* ViewController.swift in Sources */,
+				5A319CBD27CDF142004BD4B9 /* CDEProxy.mm in Sources */,
+				5A319CE727CDF4C1004BD4B9 /* Path.m in Sources */,
+				4F1253E727CD12CB00E37810 /* AppDelegate.swift in Sources */,
+				5A319CB827CDF142004BD4B9 /* CdeDownloadItem.m in Sources */,
+				5A319CBA27CDF142004BD4B9 /* CdeReachability.m in Sources */,
+				5A319CD727CDF364004BD4B9 /* NTYTimer.m in Sources */,
+				5A319CB527CDF142004BD4B9 /* CdeDownloads.m in Sources */,
+				5A319CB627CDF142004BD4B9 /* UIDevice-Hardware.m in Sources */,
+				5A319CBC27CDF142004BD4B9 /* CdeNetBroadcastReceiver.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5A319CE327CDF49C004BD4B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "cde-sdk";
+			targetProxy = 5A319CE227CDF49C004BD4B9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4F1253EC27CD12CB00E37810 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4F1253ED27CD12CB00E37810 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4F1253F127CD12D200E37810 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4F1253F227CD12D200E37810 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5A319C8927CDF142004BD4B9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A319C8A27CDF142004BD4B9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4F1253F527CD12D200E37810 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4F1253F627CD12D200E37810 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4F1253F827CD12D200E37810 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 731BF74C1BC68705E1476E48 /* Pods-AVPlayerDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XSY5KZ5PZ2;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AVPlayerDemo",
+				);
+				INFOPLIST_FILE = AVPlayerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libysdq-sdk/cde-sdk/lib",
+					"$(PROJECT_DIR)/libysdq-sdk/cde-sdk/lib/rtmfp",
+					"$(PROJECT_DIR)/libysdq-sdk/cde-sdk/cde_libs",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chc.AVPlayerDemo1237;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AVPlayerDemo/AVPlayerDemo-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4F1253F927CD12D200E37810 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CD2644D4F2D5F1DBE46525C /* Pods-AVPlayerDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XSY5KZ5PZ2;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AVPlayerDemo",
+				);
+				INFOPLIST_FILE = AVPlayerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libysdq-sdk/cde-sdk/lib",
+					"$(PROJECT_DIR)/libysdq-sdk/cde-sdk/lib/rtmfp",
+					"$(PROJECT_DIR)/libysdq-sdk/cde-sdk/cde_libs",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chc.AVPlayerDemo1237;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AVPlayerDemo/AVPlayerDemo-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F1253DE27CD12CB00E37810 /* Build configuration list for PBXProject "AVPlayerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F1253F527CD12D200E37810 /* Debug */,
+				4F1253F627CD12D200E37810 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F1253F727CD12D200E37810 /* Build configuration list for PBXNativeTarget "AVPlayerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F1253F827CD12D200E37810 /* Debug */,
+				4F1253F927CD12D200E37810 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4F1253DB27CD12CB00E37810 /* Project object */;
+}
